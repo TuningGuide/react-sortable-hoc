@@ -123,7 +123,7 @@ export default function SortableContainer(WrappedComponent, config = {withRef: f
 				this.initialOffset = this.getOffset(e);
 				this.initialScroll = this.scrollContainer[`scroll${edge}`];
 
-				this.helper = this.document.body.appendChild(node.cloneNode(true));
+				this.helper = this.container.appendChild(node.cloneNode(true));
 				this.helper.style.position = 'fixed';
 				this.helper.style.top = `${this.boundingClientRect.top - margin.top}px`;
 				this.helper.style.left = `${this.boundingClientRect.left - margin.left}px`;
